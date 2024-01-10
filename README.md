@@ -12,21 +12,25 @@ pnpm install
 
 If you don't have pnpm installed, check the [documentation](https://pnpm.io/installation)
 
-Set up the environment variables
+## Set up the environment variables
+
+Make a file called `.env` in the root directory of the project. Copy the contents of `.env.example` into it. Fill in the values for the environment variables (get them from Discord).
+
+## Generate the Prisma client
+
+```bash
+pnpx prisma generate
+```
+
+## Start the development server
+
+```bash
+pnpm dev
+```
 
 # Tech Stack
 
-# Extensions
-
-The recommended extensions for this project are bundled into the [Codify Extension Pack](https://marketplace.visualstudio.com/items?itemName=CodifyBerkeley.codify-extensions&ssr=false#overview). Install them in the marketplace to have the best developer experience.
-
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
-
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+This project uses the [T3 Stack](https://create.t3.gg/), which is a full-stack TypeScript framework for building web apps. It uses the following primary technologies:
 
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
@@ -34,11 +38,8 @@ If you are not familiar with the different technologies used in this project, pl
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
-## Learn More
+We also use [shadcn ui](https://ui.shadcn.com/) for the UI components and tRPC's built in adapter for [React Query](https://react-query.tanstack.com/) for data fetching. The shadcn cli is already configured to work with this project, so it can be used to install new components instead of copy and pasting.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+# Extensions
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+The recommended extensions for this project are bundled into the [Codify Extension Pack](https://marketplace.visualstudio.com/items?itemName=CodifyBerkeley.codify-extensions&ssr=false#overview). Install them in the marketplace to have the best developer experience.
